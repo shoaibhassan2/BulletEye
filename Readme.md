@@ -65,13 +65,13 @@ BulletEye is packed with features that provide extensive control and monitoring 
 ![Clients list](./screenshots/clients.png)
 
 **File explorer**  
-![File explorer](./explorer.png)
+![File explorer](./screenshots/explorer.png)
 
 **Logs view**  
-![Logs view](./logs.png)
+![Logs view](./screenshots/logs.png)
 
 **Main interface**  
-![Main interface](./maininterface.png)
+![Main interface](./screenshots/maininterface.png)
 
 ## 🛠️ Getting Started
 
