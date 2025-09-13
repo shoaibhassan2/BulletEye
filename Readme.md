@@ -59,6 +59,19 @@ BulletEye is packed with features that provide extensive control and monitoring 
 - **Icon Changer:** Easily change the icon of any `.exe` file.
 - **Icon Extractor:** Extract the icon from an existing `.exe` or `.dll` file and save it as an `.ico` file.
 
+## 📸 Screenshots
+
+**Clients list**  
+![Clients list](./screenshots/clients.png)
+
+**File explorer**  
+![File explorer](./explorer.png)
+
+**Logs view**  
+![Logs view](./logs.png)
+
+**Main interface**  
+![Main interface](./maininterface.png)
 
 ## 🛠️ Getting Started
 
