@@ -2,7 +2,7 @@
 
 **Repository:** `https://github.com/shoaibhassan2/BulletEye`
 
-![BulletEye Banner](https://raw.githubusercontent.com/shoaibhassan2/BulletEye/main/assets/banner/banner.png)
+![BulletEye Banner](https://raw.githubusercontent.com/shoaibhassan2/BulletEye/main/assets/icon/appicon.ico)
 
 A comprehensive Remote Administration Tool (RAT) server built in C for educational purposes. BulletEye provides a robust graphical user interface on Windows for managing and interacting with multiple remote clients simultaneously. It features a rich set of capabilities ranging from remote file exploration to keylogging, all wrapped in a secure, multi-threaded server application.
 
