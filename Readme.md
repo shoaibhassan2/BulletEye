@@ -153,7 +153,7 @@ This project has a solid foundation, but there's always room for improvement and
     -   Add graphical representations of network statistics.
     -   Show client desktop thumbnails in the client list.
 -   **Client Development:**
-    -   Develop and include the source code for the corresponding client application.
+    -   Client Code added and need improvement.
 -   **Cross-Platform Support:**
     -   Refactor the code to support a Linux-based server and/or client.
 

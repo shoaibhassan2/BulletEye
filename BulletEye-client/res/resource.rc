@@ -1,0 +1,34 @@
+#include <windows.h>
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION     1,0,0,0
+ PRODUCTVERSION  1,0,0,0
+ FILEFLAGSMASK   0x3fL
+#ifdef _DEBUG
+ FILEFLAGS       0x1L
+#else
+ FILEFLAGS       0x0L
+#endif
+ FILEOS          VOS__WINDOWS32
+ FILETYPE        VFT_APP
+ FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0" // Language ID: U.S. English, Character Set: Unicode
+        BEGIN
+            VALUE "CompanyName",      "SHKA Tech\0"
+            VALUE "FileDescription",  "BulletEye Client v1.0\0"
+            VALUE "FileVersion",      "1.0.0.0\0"
+            VALUE "InternalName",     "Client.exe\0"
+            VALUE "LegalCopyright",   "Copyright (C) 2025. All rights reserved.\0"
+            VALUE "OriginalFilename", "Client.exe\0"
+            VALUE "ProductName",      "BulletEye Client\0"
+            VALUE "ProductVersion",   "1.0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+IDI_ICON1 ICON "appicon.ico"
