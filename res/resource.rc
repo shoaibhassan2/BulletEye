@@ -1,0 +1,311 @@
+// res/resource.rc
+
+#include <windows.h>
+#include <commctrl.h>
+
+// Include the resource header file which defines all the control IDs
+#include "..\\include\\resource.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION     1,0,0,0
+ PRODUCTVERSION  1,0,0,0
+ FILEFLAGSMASK   0x3fL
+#ifdef _DEBUG
+ FILEFLAGS       0x1L
+#else
+ FILEFLAGS       0x0L
+#endif
+ FILEOS          VOS__WINDOWS32
+ FILETYPE        VFT_APP
+ FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0" // Language ID: U.S. English, Character Set: Unicode
+        BEGIN
+            VALUE "CompanyName",      "SHKA Tech\0"
+            VALUE "FileDescription",  "BulletEye Server v1.0\0"
+            VALUE "FileVersion",      "1.0.0.0\0"
+            VALUE "InternalName",     "ServerGUI.exe\0"
+            VALUE "LegalCopyright",   "Copyright (C) 2025. All rights reserved.\0"
+            VALUE "OriginalFilename", "ServerGUI.exe\0"
+            VALUE "ProductName",      "BulletEye Server\0"
+            VALUE "ProductVersion",   "1.0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+// --- End of VERSIONINFO block ---
+
+
+
+
+
+IDR_WAVE_CONNECTED              WAVE    "..\\assets\\Audio\\Connected.wav"
+IDR_WAVE_DISCONNECTED           WAVE    "..\\assets\\Audio\\Disconnected.wav"
+IDR_WAVE_WELCOME                WAVE    "..\\assets\\Audio\\Welcome.wav"
+IDR_WAVE_CLOSED                 WAVE    "..\\assets\\Audio\\Closed.wav"
+IDI_ICON_MAIN                   ICON    "..\\assets\\icon\\appicon.ico"
+IDB_WORLD                       BITMAP  "..\\assets\\bitmap\\world.bmp"
+IDB_INFO                        BITMAP  "..\\assets\\bitmap\\info.bmp"
+IDB_SETTINGS_ALT                BITMAP  "..\\assets\\bitmap\\settings_alt.bmp"
+IDB_LOGS                        BITMAP  "..\\assets\\bitmap\\logs.bmp"
+IDB_GITHUB                      BITMAP  "..\\assets\\bitmap\\github.bmp"
+IDB_TELEGRAM                    BITMAP  "..\\assets\\bitmap\\telegram.bmp"
+IDB_TOGGLE_ON                   BITMAP  "..\\assets\\bitmap\\toggle_on.bmp"
+IDB_TOGGLE_OFF                  BITMAP  "..\\assets\\bitmap\\toggle_off.bmp"
+IDB_TOOLS                       BITMAP  "..\\assets\\bitmap\\tools.bmp"
+IDB_BACKWARD                    BITMAP  "..\\assets\\bitmap\\backward.bmp"
+IDB_FORWARD                     BITMAP  "..\\assets\\bitmap\\forward.bmp"
+IDB_SETTINGS                    BITMAP  "..\\assets\\bitmap\\settings.bmp"
+
+
+
+STRINGTABLE
+BEGIN
+    // =======================================================
+    // 100-199: APP & WINDOW IDS
+    // =======================================================
+    IDS_MAIN_APP_TITLE                      L"BulletEye v1.0 Server"
+    IDS_MAIN_CLASS_NAME                     L"MainServerWindowClass"
+    IDS_ABOUT_CLASSNAME                     L"AboutWindowClass"
+    IDS_NET_CLASSNAME                       L"NetworkSettingsClass"
+    IDS_TOOLS_CLASSNAME                     L"ToolsWindowClass"
+    IDS_FILE_EXPLORER_CLASSNAME             L"FileExplorerWindowClass"
+
+    // =======================================================
+    // 200-299: TAB & PAGE STRINGS
+    // =======================================================
+    IDS_TAB_SERVER                          L"Manage Server"
+    IDS_TAB_CLIENT                          L"Connected Clients"
+    IDS_TAB_LOG                             L"Logs"
+    IDS_TOOLS_TAB_ICON_CHANGER              L"Icon Changer"
+    IDS_TOOLS_TAB_BUILDER                   L"Builder"
+    IDS_TOOLS_TAB_BINDER                    L"Binder"
+
+    // =======================================================
+    // 300-399: BUTTONS & LABELS
+    // =======================================================
+    IDS_BUTTON_SERVER_ADD                   L"Add Server"
+    IDS_LOG_BUTTON_CLEAR                    L"Clear"
+    IDS_LOG_CHECKBOX_AUTOSCROLL             L"Auto-scroll"
+    IDS_LOG_BUTTON_SAVE                     L"Save..."
+    IDS_LOG_BUTTON_COPY                     L"Copy"
+    IDS_NET_SAVE_BUTTON                     L"Save"
+    IDS_NET_CANCEL_BUTTON                   L"Cancel"
+    IDS_TOOLS_BROWSE_BUTTON                 L"Browse..."
+    IDS_TOOLS_CHANGE_ICON_BUTTON            L"Change Icon"
+    IDS_TOOLS_EXTRACT_ICON_BUTTON           L"Extract Icon..."
+    IDS_ABOUT_OK_BUTTON                     L"OK"
+    IDS_STATIC_SERVER_IPADDRESS             L"IP Address:"
+    IDS_STATIC_SERVER_PORT                  L"Port:"
+    IDS_STATIC_CLIENTS_CONNECTED            L"Clients Connected:"
+    IDS_STATIC_BYTES_RECEIVED               L"Bytes Received:"
+    IDS_STATIC_BYTES_SENT                   L"Bytes Sent:"
+    IDS_NET_LABEL_MAX_CONN                  L"Maximum Connections:"
+    IDS_NET_LABEL_TIMEOUT                   L"Connection Timeout (sec):"
+    IDS_NET_LABEL_SENDBUFF                  L"Send Buffer Size (KB):"
+    IDS_NET_LABEL_RECVBUFF                  L"Receive Buffer Size (KB):"
+    IDS_NET_LABEL_THROTTLE                  L"Limit Bandwidth Per Client"
+    IDS_NET_LABEL_UPLOAD                    L"Max Upload Rate (KB/s):"
+    IDS_NET_LABEL_DOWNLOAD                  L"Max Download Rate (KB/s):"
+    IDS_TOOLS_ICON_PATH_LABEL               L"Icon Path (.ico):"
+    IDS_TOOLS_EXE_PATH_LABEL                L"Exe Path (.exe):"
+    IDS_TOOLBAR_NETWORK                     L"Network"
+    IDS_TOOLBAR_TOOLS                       L"Tools"
+    IDS_TOOLBAR_LOGS                        L"View Logs"
+    IDS_TOOLBAR_SETTINGS                    L"Settings"
+    IDS_TOOLBAR_ABOUT                       L"About"
+
+    // =======================================================
+    // 400-499: GROUPBOXES & HEADERS
+    // =======================================================
+    IDS_GROUPBOX_SERVER_CONTROLS            L"Server Controls"
+    IDS_GROUPBOX_SERVER_STATS               L"Statistics"
+    IDS_ABOUT_GROUPBOX_TITLE                L"Important Disclaimer & Warning"
+    IDS_NET_GROUP_CONN                      L"Connection"
+    IDS_NET_GROUP_PERF                      L"Performance & Buffering"
+    IDS_NET_GROUP_THROTTLE                  L"Bandwidth Throttling"
+    IDS_TOOLS_ICON_GROUP                    L"Change Executable Icon"
+    IDS_TOOLS_EXTRACT_GROUP                 L"Extract Icon from Executable"
+
+    // =======================================================
+    // 500-599: LISTVIEW COLUMNS
+    // =======================================================
+    IDS_LISTVIEW_SERVER_STATUS              L"Status"
+    IDS_LISTVIEW_SERVER_IPADDRESS           L"IP Address"
+    IDS_LISTVIEW_SERVER_PORT                L"Port"
+    IDS_LISTVIEW_CLIENT_IP                  L"IP"
+    IDS_LISTVIEW_CLIENT_COUNTRY             L"Country"
+    IDS_LISTVIEW_CLIENT_ID                  L"ID"
+    IDS_LISTVIEW_CLIENT_USERNAME            L"Username"
+    IDS_LISTVIEW_CLIENT_OS                  L"Operating System"
+    IDS_LISTVIEW_CLIENT_GROUP               L"Group"
+    IDS_LISTVIEW_CLIENT_DATE                L"Date"
+    IDS_LISTVIEW_CLIENT_UAC                 L"UAC"
+    IDS_LISTVIEW_CLIENT_CPU                 L"CPU"
+    IDS_LISTVIEW_CLIENT_GPU                 L"GPU"
+    IDS_LISTVIEW_CLIENT_RAM                 L"RAM"
+    IDS_LISTVIEW_CLIENT_ANTIVIRUS           L"Antivirus"
+    IDS_LISTVIEW_CLIENT_ACTIVE_WINDOW       L"Active Window"
+    IDS_LOG_COLUMN_TIME                     L"Time"
+    IDS_LOG_COLUMN_MESSAGE                  L"Message"
+
+    // =======================================================
+    // 600-699: MENU ITEMS
+    // =======================================================
+    IDS_MENU_START_SERVER                   L"Start Server"
+    IDS_MENU_STOP_SERVER                    L"Stop Server"
+    IDS_MENU_REMOVE_SERVER                  L"Remove Server"
+    IDS_MENU_FILE_EXPLORER                  L"File Explorer"
+    IDS_SUBMENU_CONNECTION                  L"Connection"
+    IDS_MENU_DISCONNECT_CLIENT              L"Disconnect Client"
+    IDS_MENU_RESTART_CONNECTION             L"Restart Connection"
+    IDS_MENU_EXIT_CLIENT                    L"Shutdown Client"
+
+    IDS_SUBMENU_KEYLOGGER                   L"Keylogger"
+    IDS_MENU_START_KEYLOGGER                L"Start Keylogger"
+    IDS_MENU_STOP_KEYLOGGER                 L"Stop Keylogger"
+    IDS_MENU_DWN_KEYLOG                     L"Download keylog"
+    IDS_MENU_DEL_KEYLOG                     L"Delete keylog"
+    IDS_LOG_KEYLOGGER_STARTED               L"Sent START keylogger command to client"
+    IDS_LOG_KEYLOGGER_STOPPED               L"Sent STOP keylogger command to client"
+    IDS_LOG_KEYLOGGER_DOWNLOADED            L"Requested keylog download from client"
+    IDS_LOG_KEYLOGGER_DELETED               L"Requested keylog deletion from client"
+
+
+    IDS_FE_MENU_FILE                        L"&File"
+    IDS_FE_MENU_VIEW                        L"&View"
+    IDS_FE_MENU_HELP                        L"&Help"
+    IDS_FE_MENU_OPEN                        L"&Open"
+    IDS_FE_MENU_UPLOAD                      L"&Upload..." // New
+    IDS_FE_MENU_EXIT                        L"E&xit"
+    IDS_FE_MENU_REFRESH                     L"&Refresh"
+    IDS_FE_MENU_ABOUT                       L"&About"
+    IDS_FE_CONTEXT_RENAME                   L"Re&name"
+    IDS_FE_CONTEXT_DELETE                   L"&Delete"
+    IDS_FE_CONTEXT_EXECUTE                  L"E&xecute"
+    IDS_FE_CONTEXT_DOWNLOAD                 L"&Download" // New
+
+    // =======================================================
+    // 700-799: DIALOG WINDOW TEXT
+    // =======================================================
+    IDS_ABOUT_CAPTION                       L"About BulletEye Server"
+    IDS_ABOUT_TITLE                         L"BulletEye Server v1.0"
+    IDS_ABOUT_AUTHOR                        L"Copyright (C) 2025 by Shoaib Hassan."
+    IDS_ABOUT_DISCLAIMER_TEXT               L"This application is designed for educational purposes ONLY, to demonstrate advanced C programming and networking concepts. \n\nAny use of this software for malicious activities, including but not limited to creating backdoors, unauthorized system access, or launching denial-of-service attacks, is strictly prohibited, unethical, and illegal. The author is not responsible for any misuse of this program."
+    IDS_ABOUT_SYSLINK_GITHUB                L"For more, visit the <a>official GitHub repository</a>."
+    IDS_ABOUT_SYSLINK_TELEGRAM              L"Contact the author on <a>Telegram</a>."
+    IDS_NET_CAPTION                         L"Network Settings"
+    IDS_TOOLS_CAPTION                       L"Extra Tools"
+    IDS_FILE_EXPLORER_CAPTION               L"File Explorer"
+
+    // =======================================================
+    // 800-899: TOOLTIPS
+    // =======================================================
+    IDS_TOOLTIP_IPADDRESS                   L"Enter the IP address for the server to listen on. Use 127.0.0.1 for local connections."
+    IDS_TOOLTIP_PORT                        L"Enter the port number (1-65535) for the server to listen on."
+    IDS_TOOLTIP_ADDSERVER                   L"Start a new server instance with the specified IP and Port."
+    IDS_TOOLTIP_SERVERLIST                  L"Displays the list of active server instances, their status, and connection details."
+    IDS_TOOLTIP_CLIENTLIST                  L"Displays a list of all clients currently connected to your servers."
+    IDS_TOOLTIP_LOGLIST                     L"Displays real-time logs, events, and errors from the application."
+    IDS_TOOLTIP_LOG_CLEAR                   L"Clear all messages from the log view."
+    IDS_TOOLTIP_LOG_AUTOSCROLL              L"When checked, automatically scrolls to the newest log message as it arrives."
+    IDS_TOOLTIP_LOG_SAVE                    L"Save the entire log content to a text (.txt) file."
+    IDS_TOOLTIP_LOG_COPY                    L"Copy the entire log content to the system clipboard."
+    IDS_TOOLTIP_ABOUT_OK                    L"Close this window."
+    IDS_TOOLTIP_NET_MAXCONN                 L"Set the maximum number of concurrent client connections allowed across all servers."
+    IDS_TOOLTIP_NET_TIMEOUT                 L"Set the timeout in seconds. Connections will be dropped after this period of inactivity."
+    IDS_TOOLTIP_NET_SENDBUFF                L"Set the kernel send buffer size in Kilobytes (KB) for each client socket."    IDS_TOOLTIP_NET_RECVBUFF                L"Set the kernel receive buffer size in Kilobytes (KB) for each client socket."
+    IDS_TOOLTIP_NET_THROTTLE                L"Enable or disable bandwidth limiting for each connected client."
+    IDS_TOOLTIP_NET_UPLOAD                  L"Set the maximum upload speed (server to client) per client in KB/s. Requires throttling to be enabled."
+    IDS_TOOLTIP_NET_DOWNLOAD                L"Set the maximum download speed (client to server) per client in KB/s. Requires throttling to be enabled."
+    IDS_TOOLTIP_NET_SAVE                    L"Save the current network settings and apply them."
+    IDS_TOOLTIP_NET_CANCEL                  L"Discard any changes and close this window."
+    IDS_TOOLTIP_PORT_EXCEED                 L"Port number cannot exceed 65535."
+
+    // =======================================================
+    // 1100-1199: STATUS & LOG MESSAGES
+    // =======================================================
+    IDS_STATUS_LISTENING                    L"Listening"
+    IDS_STATUS_STARTING                     L"Starting..."
+    IDS_STATUS_ERROR                        L"Error"
+    IDS_STATUS_STOPPED                      L"Stopped"
+    IDS_STATUS_UNKNOWN                      L"Unknown"
+    IDS_UAC_ADMIN                           L"Admin"
+    IDS_UAC_USER                            L"User"
+    IDS_LOG_APP_STARTED                     L"Application started and main window created."
+    IDS_LOG_APP_CLOSING                     L"Application closing..."
+    IDS_LOG_LOG_CLEARED                     L"Log cleared by user."
+    IDS_LOG_AUTOSCROLL_ON                   L"Auto-scroll enabled."
+    IDS_LOG_AUTOSCROLL_OFF                  L"Auto-scroll disabled."
+    IDS_LOG_SETTINGS_CLICKED                L"Settings button clicked (not implemented)."
+    IDS_LOG_CLIENT_DISCONNECTED_BY_USER     L"Disconnected client: %hs"
+    IDS_LOG_CLIENT_RESTART_CMD_SENT         L"Sent restart command to client: %hs"
+    IDS_LOG_CLIENT_FILEEXPLORER_CMD_SENT    L"Sent file explorer command to client: %hs"
+    IDS_FE_STATUS_LOADING                   L"Loading..."
+    IDS_FE_STATUS_ERROR_PATH_CONV           L"Error: Path conversion failed"
+    IDS_FE_STATUS_ERROR_NO_RESPONSE         L"Error: No response from server"
+    IDS_FE_STATUS_ERROR_INVALID_RESPONSE    L"Error: Invalid server response"
+    IDS_FE_STATUS_ERROR_SERVER_FAIL         L"Error: Server returned failure"
+    IDS_FE_STATUS_ITEMS_FMT                 L"%ls - %d items"
+    IDS_FE_STATUS_UPLOADING_FMT             L"Uploading %ls: %lld/%lld bytes (%.1f%%)"
+    IDS_FE_STATUS_DOWNLOADING_FMT           L"Downloading %ls: %lld/%lld bytes (%.1f%%)"
+    IDS_FE_STATUS_UPLOAD_COMPLETE_FMT       L"Upload of %ls complete!"
+    IDS_FE_STATUS_DOWNLOAD_COMPLETE_FMT     L"Download of %ls complete!"
+    IDS_FE_STATUS_TRANSFER_FAIL_FMT         L"Transfer of %ls failed."
+
+    // =======================================================
+    // 1200-1299: ERROR & WARNING MESSAGES
+    // =======================================================
+    IDS_ERR_CAPTION                         L"Error"
+    IDS_ERR_MAX_SERVERS_REACHED             L"Maximum number of servers reached."
+    IDS_ERR_REGISTER_FAIL_MAIN              L"Failed to register main window class! Application will now exit."
+    IDS_ERR_CREATE_FAIL_MAIN                L"Failed to create main window! Application will now exit."
+    IDS_ERR_REGISTER_FAIL_ABOUT             L"Failed to register About window class."
+    IDS_ERR_REGISTER_FAIL_NET               L"Failed to register Network Settings window class."
+    IDS_ERR_REGISTER_FAIL_TOOLS             L"Failed to register Tools window class."
+    IDS_ERR_REGISTER_FAIL_FILE_EXPLORER     L"Failed to register File Explorer window class."
+    IDS_TOOLS_MSG_ICON_SUCCESS              L"Icon has been changed successfully!"
+    IDS_TOOLS_MSG_ICON_FAIL                 L"Failed to change the icon. Check file paths and permissions."
+    IDS_TOOLS_MSG_EMPTY_PATHS               L"Please provide valid paths for both the icon and the executable file."
+    IDS_TOOLS_MSG_EXTRACT_SUCCESS           L"Icon extracted successfully and saved to the specified path."
+    IDS_TOOLS_MSG_EXTRACT_FAIL              L"Failed to extract icon. The file may not contain an icon or could not be read."
+
+    // =======================================================
+    // 1300-1399: REGISTRY & SETTINGS
+    // =======================================================
+    IDS_REG_KEY_PATH                        L"Software\\BulletEye\\ServerGUI"
+    IDS_REG_SUBKEY_SERVERS                  L"Servers"
+    IDS_REG_VALUE_IP                        L"1302"
+    IDS_REG_VALUE_PORT                      L"1303"
+    IDS_LOG_SERVERS_SAVED                   L"Server configurations saved to registry."
+    IDS_LOG_SERVERS_LOADED                  L"Loaded %d server configuration(s) from registry."
+    IDS_LOG_NO_SERVERS_FOUND                L"No saved server configurations found in registry."
+
+    IDS_SETTINGS_CLASSNAME                  L"SettingsDialogClass"
+    IDS_SETTINGS_SHOW_HIDDEN                L"Show hidden files and folders"
+    IDS_LV_COL_NAME                         L"Name"
+    IDS_LV_COL_TYPE                         L"Type"
+    IDS_LV_COL_SIZE                         L"Size"
+    IDS_LV_COL_MODIFIED                     L"Date modified"
+    IDS_FE_ABOUT_CAPTION                    L"About Remote File Explorer"
+    IDS_FE_ABOUT_TEXT                       L"Remote File Explorer\nVersion 1.0"
+    IDS_CONFIRM_EXEC_CAPTION                L"Confirm Execution"
+    IDS_CONFIRM_EXEC_TEXT                   L"Are you sure you want to execute this file?\nExecuting untrusted files may be dangerous."
+    IDS_CONFIRM_DELETE_CAPTION              L"Confirm Deletion"
+    IDS_CONFIRM_DELETE_TEXT                 L"Are you sure you want to delete this item?\nThis action cannot be undone."
+    IDS_FE_CONTEXT_ENCRYPT                  L"Encrypt"
+    IDS_FE_CONTEXT_DECRYPT                  L"Decrypt"
+    IDS_CONFIRM_ENCRYPT_TEXT                L"Are you sure you want to encrypt this file? This operation cannot be undone."
+    IDS_CONFIRM_ENCRYPT_CAPTION             L"Confirm Encryption"
+    IDS_CONFIRM_DECRYPT_TEXT                L"Are you sure you want to decrypt this file?"
+    IDS_CONFIRM_DECRYPT_CAPTION             L"Confirm Decryption"
+END
+
+
+
+1 RT_MANIFEST "Server.exe.manifest"
